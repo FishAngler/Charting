@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishAngler.Charting", "src\FishAngler.Charting\FishAngler.Charting.csproj", "{0E538044-DAB7-4FD2-8CD6-80AEF030A801}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishAngler.Charting.Example", "src\FishAngler.Charting.Example\FishAngler.Charting.Example.csproj", "{B91C5478-C7BB-4E11-941C-5437C40FE832}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishAngler.Charting.Example", "src\Example\FishAngler.Charting.Example.csproj", "{B91C5478-C7BB-4E11-941C-5437C40FE832}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
