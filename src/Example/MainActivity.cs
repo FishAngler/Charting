@@ -12,7 +12,11 @@ namespace FishAngler.Charting.Example
         {
             base.OnCreate(bundle);
 
+            var scoller = new ScrollView(this);
+            scoller.LayoutParameters = new Android.Views.ViewGroup.LayoutParams(Android.Views.ViewGroup.LayoutParams.MatchParent, Android.Views.ViewGroup.LayoutParams.MatchParent);
+
             var chartContainer = new LinearLayout(this);
+            chartContainer.LayoutParameters = new Android.Views.ViewGroup.LayoutParams(Android.Views.ViewGroup.LayoutParams.MatchParent, Android.Views.ViewGroup.LayoutParams.WrapContent);
             chartContainer.Orientation = Orientation.Vertical;
             chartContainer.SetBackgroundColor(Android.Graphics.Color.White);
 
@@ -27,14 +31,25 @@ namespace FishAngler.Charting.Example
 
             var chart2 = new Chart(this);
             chart2.NumberGridLines = 3;
-            chart2.NumberPoints = 12;
+            chart2.NumberPoints = 8;
             chart2.Title1 = "Water Temp (C)";
             chart2.Title2 = "Water Temp is Changing A Lot";
             chart2.LayoutParameters = new Android.Views.ViewGroup.LayoutParams(Android.Views.ViewGroup.LayoutParams.MatchParent, (350).ToDIP(Resources));
             chartContainer.AddView(chart2);
 
 
-            SetContentView(chartContainer);
+            var chart3 = new Chart(this);
+            chart3.NumberGridLines = 5;
+            chart3.NumberPoints = 6;
+            chart3.Title1 = "Fish Forecast (C)";
+            chart3.Title2 = "Best time to catch fish";
+            chart3.LayoutParameters = new Android.Views.ViewGroup.LayoutParams(Android.Views.ViewGroup.LayoutParams.MatchParent, (350).ToDIP(Resources));
+            chartContainer.AddView(chart3);
+
+
+            scoller.AddView(chartContainer);
+
+            SetContentView(scoller);
         }
     }
 }
